@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#053bbf">
+  <meta name="description" content="ciberIoT se encuentra en proceso de actualización. Muy pronto estaremos de regreso.">
+  <title>ciberIoT | Estamos evolucionando</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{min-height:100vh;display:grid;place-items:center;padding:28px;color:#fff;background:#053bbf url("background.jpg") center/cover fixed no-repeat}
+    .veil{position:fixed;inset:0;background:linear-gradient(135deg,rgba(0,28,100,.20),rgba(0,73,220,.10));z-index:-1}
+    .card{width:min(920px,100%);padding:64px 72px 58px;text-align:center;background:rgba(2,37,115,.38);border:1px solid rgba(255,255,255,.20);border-radius:30px;box-shadow:0 30px 90px rgba(0,18,70,.30);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+    .logo{display:block;width:min(230px,62vw);height:auto;margin:0 auto 38px;border-radius:3px}
+    .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;opacity:.82;margin-bottom:14px}
+    h1{margin:0;font-size:clamp(2.7rem,6vw,5.2rem);line-height:1.02;letter-spacing:-.045em;font-weight:760}
+    h1 span{font-weight:450}
+    .rule{width:74px;height:3px;margin:25px auto 27px;border-radius:10px;background:rgba(255,255,255,.88)}
+    .lead{max-width:650px;margin:0 auto;color:rgba(255,255,255,.88);font-size:clamp(1rem,1.8vw,1.18rem);line-height:1.8}
+    .contact{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:15px 24px;border:1px solid rgba(255,255,255,.50);border-radius:999px;color:#fff;text-decoration:none;background:rgba(0,40,130,.28);font-weight:650;transition:.2s ease}
+    .contact:hover{background:rgba(255,255,255,.12);transform:translateY(-1px)}
+    .mail{width:19px;height:14px;border:2px solid #fff;border-radius:3px;display:inline-block;position:relative}
+    .mail:after,.mail:before{content:"";position:absolute;top:1px;width:10px;height:2px;background:#fff}
+    .mail:before{left:0;transform:rotate(31deg);transform-origin:left center}
+    .mail:after{right:0;transform:rotate(-31deg);transform-origin:right center}
+    .footer{margin-top:42px;color:rgba(255,255,255,.62);font-size:.78rem}
+    @media(max-width:640px){
+      body{padding:16px}
+      .card{padding:44px 24px 38px;border-radius:22px}
+      .logo{width:min(210px,70vw);margin-bottom:30px}
+      .lead{line-height:1.7}
+      .contact{width:100%;justify-content:center}
+    }
+    @media(prefers-reduced-motion:no-preference){
+      .card{animation:in .6s ease-out both}
+      @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    }
+  </style>
+</head>
+<body>
+  <div class="veil" aria-hidden="true"></div>
+  <main class="card">
+    <img class="logo" src="logo.jpg" alt="ciberIoT">
+    <div class="eyebrow">Sitio en actualización</div>
+    <h1>Estamos evolucionando<br><span>para ofrecerte algo mejor.</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="lead">
+      Actualmente estamos trabajando en una nueva etapa para ciberIoT.
+      Estamos actualizando nuestra plataforma y preparando nuevas soluciones
+      orientadas a la innovación, la conectividad y el futuro tecnológico.
+    </p>
+    <a class="contact" href="mailto:prensa@ciberiot.com">
+      <span class="mail" aria-hidden="true"></span>
+      prensa@ciberiot.com
+    </a>
+    <div class="footer">Gracias por tu comprensión y confianza. Muy pronto estaremos de regreso.</div>
+  </main>
+</body>
+</html>
