@@ -27,4 +27,28 @@
 <div class="detail"><span class="contact-icon">✉</span><div><small>Prensa y comunicaciones</small><a href="mailto:prensa@ciberiot.com">prensa@ciberiot.com</a></div></div><div class="detail"><span class="contact-icon">✉</span><div><small>Contacto adicional</small><a href="mailto:mperez@ciberiot.com">mperez@ciberiot.com</a></div></div><div class="detail"><span class="contact-icon">☎</span><div><small>Teléfono publicado</small><a href="tel:+56993523842">+56 9 9352 3842</a></div></div><p class="note">Datos recopilados de perfiles sociales; confirmar antes de publicar.</p></div>
 <form id="contact-form"><h3>Envíanos una consulta</h3><label for="name">Nombre y apellido *</label><input id="name" name="name" required placeholder="Tu nombre"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" required placeholder="nombre@empresa.cl"><label for="company">Empresa (opcional)</label><input id="company" name="company" placeholder="Nombre de la empresa"><label for="message">Mensaje *</label><textarea id="message" name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea><label class="privacy"><input type="checkbox" required> Confirmo que puedo ser contactado respecto de esta consulta.</label><button class="button" type="submit">Probar formulario ↗</button><p id="status" class="form-status" role="status">Demostración visual: aún no envía ni almacena datos.</p></form></section>
 </main><footer id="redes"><a class="brand" href="#inicio"><span class="logo">ciber.<b>iOT</b></span><strong>CiberIoT</strong></a><p>Comunicación sobre tecnología, industria e innovación.</p><div class="social"><a class="social-icon linkedin" href="https://cl.linkedin.com/company/ciberiot" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a class="social-icon instagram" href="https://www.instagram.com/ciberiot/" target="_blank" rel="noopener" aria-label="Instagram">◎</a><a class="social-icon facebook" href="https://www.facebook.com/Ciberiot" target="_blank" rel="noopener" aria-label="Facebook">f</a><span class="social-note">Síguenos en nuestros perfiles.</span></div><small>Plantilla temporal para revisión. Enlaces y contenido pendientes de validación.</small></footer>
-<script src="script.js"></script></body></html>
+<script src="script.js"></script>
+<script>
+(function(){
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('.hero-copy, .visual, .section .kicker, .two-col h2, .two-col > div, .section-heading, .image-cards article, .activity-grid article, .news-inner, .contact > div, .contact form');
+  if (reduced || !('IntersectionObserver' in window)) {
+    targets.forEach(function(el){el.classList.add('is-visible')});
+    return;
+  }
+  targets.forEach(function(el, index){
+    if (el.closest('.header') || el.closest('footer')) return;
+    el.classList.add('js-reveal');
+    if (el.matches('.hero-copy, .two-col h2, .section-heading h2, .contact h2')) el.setAttribute('data-reveal','left');
+    if (el.matches('.visual, .two-col > div, .contact form')) el.setAttribute('data-reveal','right');
+    if (el.matches('.image-cards article, .activity-grid article')) el.style.transitionDelay = ((index % 4) * 75) + 'ms';
+  });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
+    });
+  }, {threshold:0.12,rootMargin:'0px 0px -35px 0px'});
+  targets.forEach(function(el){if(el.classList.contains('js-reveal')) observer.observe(el)});
+})();
+</script>
+</body></html>
