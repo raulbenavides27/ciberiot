@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+<title id="title">Logo CiberIoT</title>
+<defs><radialGradient id="bg" cx="48%" cy="38%" r="78%"><stop offset="0" stop-color="#0867ff"/><stop offset="1" stop-color="#073baf"/></radialGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#001c65" flood-opacity=".35"/></filter></defs>
+<rect width="512" height="512" rx="5" fill="url(#bg)"/>
+<g filter="url(#shadow)" font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle">
+<text x="256" y="232" font-size="112" letter-spacing="-7" fill="#fff">ciber.</text>
+<rect x="128" y="266" width="256" height="124" fill="#fff"/>
+<text x="256" y="366" font-size="100" letter-spacing="-5" fill="#0754d8">iOT</text>
+</g></svg>
