@@ -177,3 +177,31 @@ footer>small{font-size:11px}
 .image-spec-note small{display:block;margin-top:7px;padding-top:7px;border-top:1px solid #d5a82e;color:#49350a;font-size:11px;line-height:1.45}
 .media-spec{margin:14px 0 0}
 @media(max-width:680px){.image-production-note{width:calc(100% - 42px);margin:16px auto 6px;padding:15px}.image-spec-note{padding:11px 12px}.image-spec-note span{font-size:11px}.image-spec-note small{font-size:10px}}
+
+
+/* Fotografías reales incorporadas para revisión editorial */
+.newsroom-hero{
+  background-image:linear-gradient(90deg,rgba(3,15,31,.94),rgba(3,18,37,.78) 50%,rgba(3,18,37,.20)),url("assets/hero-industria-desktop.webp");
+  background-position:center center;
+  background-size:cover;
+}
+.newsroom-visual{
+  background-image:linear-gradient(180deg,rgba(3,17,37,.08),rgba(3,17,37,.78)),url("assets/produccion-audiovisual.webp");
+  background-position:center;
+  background-size:cover;
+}
+#tema-mineria{padding:0 0 24px;overflow:hidden}
+#tema-mineria .topic-image{display:block;width:100%;height:160px;object-fit:cover;margin:0 0 22px}
+#tema-mineria>span,#tema-mineria>h3,#tema-mineria>p{margin-left:24px;margin-right:24px}
+#tema-mineria>span{margin-bottom:14px}
+.content-preview-grid:has(>article:only-child){grid-template-columns:minmax(0,760px);justify-content:center}
+.content-preview>img{height:270px;object-fit:cover}
+@media(max-width:680px){
+  .newsroom-hero{
+    background-image:linear-gradient(180deg,rgba(3,15,31,.84),rgba(3,18,37,.72)),url("assets/hero-industria-mobile.webp");
+    background-position:center 42%;
+  }
+  #tema-mineria .topic-image{height:190px}
+  .content-preview-grid:has(>article:only-child){grid-template-columns:1fr}
+  .content-preview>img{height:220px}
+}
